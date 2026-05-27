@@ -248,7 +248,7 @@ func getTypeInfoOVH(flavors []ovhFlavor) map[string]*InstanceInfo {
 	for _, f := range flavors {
 		m[f.ID] = &InstanceInfo{
 			cpu:    int64(f.VCPUs),
-			memory: f.RAM * gib, // OVH flavor API reports RAM in GB
+			memory: f.RAM * gib,
 			disk:   f.Disk * gib,
 		}
 	}
